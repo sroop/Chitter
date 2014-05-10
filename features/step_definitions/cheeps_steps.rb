@@ -1,5 +1,4 @@
-Then(/^I should see:$/) do |table|
-  # table is a Cucumber::Ast::Table
+Then(/^I should see:$/) do
   expect(page).to have_content("Welcome to Chitter!")
 end
 
