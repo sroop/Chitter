@@ -1,9 +1,9 @@
 Chitter
 =======
+##### End of Week 6 project at Makers Academy
+=======
 
 Chitter is a little Twitter clone that will allow the users to post messages to a public stream.
-
-##### End of Week 6 project at Makers Academy
 
 Features:
 
