@@ -1,4 +1,5 @@
 Feature: User can see a live stream of cheeps
+
 	In order to see what people are cheeping about
 	As a brand new user 
 	I want to sign up, log in and see all cheeps in chronological order
