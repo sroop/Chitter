@@ -1,6 +1,5 @@
-require 'data_mapper'
-
 class Cheep
+
 	include DataMapper::Resource
 
 	property :id, Serial
