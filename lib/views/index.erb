@@ -5,19 +5,18 @@
 	<body>
 		<header>
 			<h1>Welcome to Chitter!</h1>
+			<form action="/user" method="GET">
+				<button type="submit">Login</button>
+			</form>
 		</header>
 		<section>
-			<form action="/" method="POST">
-				Cheep: <input type="text" name="cheep">
-				<button type="submit">Cheep!</button>
+			<form action="/user" method="GET">
+				Name: <input type="text" name="user">
+				Email: <input type="text" name="email">
+				Password: <input type="password" name="password">
+				Username: <input type="text" name="username">
+				<button type="submit">Sign Up</button>
 			</form>
-
-			<% @cheeps.each do |cheep| %>
-				<li><%= cheep.user %><br/>
-					<%= cheep.cheep %>
-					<%= cheep.created_at %></li>
-			<% end %>
-
 		</section>
 	</body>
 </html>

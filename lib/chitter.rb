@@ -13,6 +13,10 @@ class Chitter < Sinatra::Base
     erb :index
   end
 
+  get '/user' do
+  erb :user
+  end
+
   post '/' do
     Cheep.create(cheep: params["cheep"], user: params["user"], username: params["@username"], created_at: params[Time.now])
     redirect to('/')
