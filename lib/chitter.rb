@@ -1,12 +1,20 @@
 require 'sinatra/base'
+require 'cheep'
+require 'data_mapper'
+
+env = ENV["RACK_ENV"] || "development"
+DataMapper.setup(:default, "postgres://localhost/chitter_#{env}")
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 class Chitter < Sinatra::Base
   get '/' do
+  	@cheeps = Cheep.all
     erb :index
   end
 
   post '/' do
-    Cheep.create(cheep: params["cheep"], name: params["name"], username: params["@username"], time: params["time"])
+    Cheep.create(cheep: params["cheep"], user: params["user"], username: params["@username"], created_at: params[Time.now])
     redirect to('/')
   end
 
