@@ -1,4 +1,3 @@
-require 'cheep'
 require 'spec_helper'
 
 describe Cheep do

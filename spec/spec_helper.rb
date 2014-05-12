@@ -1,6 +1,6 @@
 ENV["RACK_ENV"] = 'test'
 
-require_relative '../lib/chitter'
+require './lib/chitter'
 require 'capybara/rspec'
 require 'database_cleaner'
 
