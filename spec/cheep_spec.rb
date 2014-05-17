@@ -13,6 +13,6 @@ describe Cheep do
 	 		example_cheep.destroy
 	 		expect(Cheep.count).to eq(0)
 	 	end
-
+	 	
   	end
 end
