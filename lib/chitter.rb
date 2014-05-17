@@ -12,7 +12,7 @@ set :session_secret, 'super secret'
   end
 
   post '/' do
-    Cheep.create(cheep: params["cheep"], user: params["user"], username: params["username"], created_at: params[Time.now])
+    Cheep.create(cheep: params[:cheep], created_at: params[Time.now])
     redirect to('/')
   end
 

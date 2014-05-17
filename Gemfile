@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dm-timestamps'
+gem 'dm-migrations'
 gem 'bcrypt-ruby'
 gem 'rack-flash3'
 

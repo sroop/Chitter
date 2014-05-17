@@ -113,6 +113,7 @@ DEPENDENCIES
   cucumber-sinatra
   data_mapper
   database_cleaner
+  dm-migrations
   dm-postgres-adapter
   dm-timestamps
   rack-flash3
