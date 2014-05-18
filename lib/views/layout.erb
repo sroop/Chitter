@@ -4,14 +4,31 @@
 	</head>
 	<body>
 
+	<% unless current_user %>
+
+		<header>
+			<h1>Welcome to Chitter!</h1>
+			
+			<form action="/users/new" method="GET">
+				<button type="submit">Sign Up!</button>
+			</form>
+
+			<form action="/sessions/new" method="GET">
+				<button type="submit">Sign In!</button>
+			</form>
+
+		</header>
+
+	 <% end %>
+
 	<% if current_user %>
 
-	<form action="/sessions" method="POST">
-		<input type="hidden" name="_method" value="delete">
-			<button type="submit">Sign Out!</button>
-	</form>
+		<form action="/sessions" method="POST">
+			<input type="hidden" name="_method" value="delete">
+				<button type="submit">Sign Out!</button>
+		</form>
 
-    Welcome, <%= current_user.name %>
+    	Welcome, <%= current_user.name %>
     
  	<% end %>
 

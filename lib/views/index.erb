@@ -1,24 +1,17 @@
 
-		<header>
-			<h1>Welcome to Chitter!</h1>
-			<form action="/users/new" method="GET">
-			<button type="submit">Sign Up!</button>
-			</form>
+		
+<section>
 
-			<form action="/sessions/new" method="GET">
-			<button type="submit">Sign In!</button>
-			</form>
-
-		</header>
-		<section>
-			<form action="/" method="POST">
-				Cheep: <input type="text" name="cheep">
+	<% if current_user %>	
+		<form action="/" method="POST">
+			<input type="text" name="cheep">
 				<button type="submit">Cheep!</button>
-			</form>
+		</form>
+	<% end %>	
+		
+	<% @cheeps.each do |cheep| %>
+		<li><%= cheep.cheep %>
+			<%= cheep.created_at %></li>
+	<% end %>
 
-			<% @cheeps.each do |cheep| %>
-				<li><%= cheep.cheep %>
-					<%= cheep.created_at %></li>
-			<% end %>
-
-		</section>
+</section>
