@@ -4,3 +4,7 @@ Given(/^I am a signed up user$/) do
                 username: "sroopsunar",
                 password: "123")
 end
+
+Then(/^I should not be logged in$/) do
+  expect(page).to have_content("Please sign in!")
+end
