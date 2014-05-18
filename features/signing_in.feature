@@ -1,7 +1,7 @@
 Feature: User can sign in to Chitter
 	In order to use Chitter
 	As a signed up user
-	I want to be able to sign in
+	I want to be able to sign in using my logins
 
 	Scenario: Open the home page
 		Given I am on the home page

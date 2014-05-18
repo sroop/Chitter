@@ -5,6 +5,7 @@ class Chitter < Sinatra::Base
 
 enable :sessions
 set :session_secret, 'super secret'
+use Rack::MethodOverride
 
   get '/' do
   	@cheeps = Cheep.all
@@ -48,6 +49,12 @@ set :session_secret, 'super secret'
       # flash[:errors] = ["The email or password is incorrect"]
       erb :"sessions/new"
     end
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    # flash[:notice] = "Good bye!"
+    redirect to('/')
   end
 
 helpers do
