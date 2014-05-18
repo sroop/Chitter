@@ -3,7 +3,7 @@ Feature: User can sign up to Chitter
 	As a brand new user
 	I want to be able to sign up
 
-	Scenario: Open the homepage
+	Scenario: Open the home page
 		Given I am on the home page
 		Then I should see "Sign Up!"
 
