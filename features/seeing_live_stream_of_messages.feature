@@ -5,7 +5,7 @@ Feature: User can see a live stream of cheeps
 
 	Scenario: Open the homepage
 		Given I am on the homepage
-		Then I should see "Welcome to Chitter!"
+		Then I should see "Welcome to Chitter."
 
 	Scenario: Adding a cheep
 		Given I am on the homepage

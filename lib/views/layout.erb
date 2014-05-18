@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/reset.css" />
+	<link type="text/css" rel="stylesheet" href="/stylesheets/stylesheet.css" />
 	</head>
 	<body>
 
+	<header>
+	</header>
+
 	<% unless current_user %>
 
-		<header>
-			<h1>Welcome to Chitter!</h1>
+		<section>
+			<h1>Welcome to Chitter.</h1>
 			
 			<form action="/users/new" method="GET">
 				<button type="submit">Sign Up!</button>
@@ -17,7 +22,7 @@
 				<button type="submit">Sign In!</button>
 			</form>
 
-		</header>
+		</section>
 
 	 <% end %>
 

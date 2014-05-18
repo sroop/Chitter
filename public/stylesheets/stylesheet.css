@@ -1,0 +1,20 @@
+body {
+	background-color: #3a92c8;
+	background: radial-gradient(circle,#94d2f8,#3a92c8);
+	background-image: radial-gradient(circle, rgb(148, 210, 248), rgb(58, 146, 200));
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: #3a92c8;
+}
+
+header {
+	background-color: #fff;
+	height: 46px;
+	width: 100%;
+}
