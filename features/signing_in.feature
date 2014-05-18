@@ -7,7 +7,7 @@ Feature: User can sign in to Chitter
 		Given I am on the home page
 		Then I should see "Sign In!"
 
-	Scenario: Signing in to Chitter with the correct credentials
+	Scenario: Signing in to Chitter with the correct credentials (happy path)
 		Given I am a signed up user
 		And I click on "Sign In!"
 		When I fill in "email" with "sroopsunar@hotmail.com"
@@ -15,10 +15,10 @@ Feature: User can sign in to Chitter
 		And I press "Go!"
 		Then I should be logged in
 
-	Scenario: Signing in to Chitter with the incorrect credentials
+	Scenario: Signing in to Chitter with the incorrect credentials(sad path)
 		Given I am a signed up user
 		And I click on "Sign In!"
 		When I fill in "email" with "sroopsunar@hotmail.com"
 		And I fill in "password" with "wrong"
 		And I press "Go!"
-		Then I should not be logged in
+		Then I should see "Please sign in!"
