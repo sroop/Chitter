@@ -1,9 +1,18 @@
 		
 <section>
 
-	<%= partial :"partials/sign_in_form" %>
+	<% unless current_user %>
 
-	<%= partial :"partials/sign_up_form" %>
+		<%= partial :"partials/sign_in_form" %>
+
+		<%= partial :"partials/sign_up_form" %>
+		
+		<section>
+			<h1>Welcome to Chitter.</h1>
+			<p>Start a conversation, explore your interests, and be in the know.</p>
+		</section>
+
+	 <% end %>
 
 	<% if current_user %>	
 		<form action="/" method="POST">

@@ -9,17 +9,6 @@
 	<header>
 	</header>
 
-	<% unless current_user %>
-
-		<section>
-			<h1>Welcome to Chitter.</h1>
-			
-			
-
-		</section>
-
-	 <% end %>
-
 	<% if current_user %>
 
 		<form action="/sessions" method="POST">
