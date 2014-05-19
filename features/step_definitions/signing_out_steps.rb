@@ -7,7 +7,7 @@ Given(/^I am signed in$/) do
   visit '/sessions/new'
   fill_in "email", with: "sroopsunar@hotmail.com"
   fill_in "password", with: "123"
-  click_on "Go!"
+  click_on "Sign In!"
   expect(page).to have_content("Welcome, Sroop Sunar")
 end
 

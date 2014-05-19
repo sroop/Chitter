@@ -14,7 +14,7 @@ Feature: User can sign up to Chitter
 		And I fill in "username" with "sroopsy"
 		And I fill in "password" with "123"
 		And I fill in "password_confirmation" with "123"
-		And I press "Go!"
+		And I press "Sign Up!"
 		Then I should be logged in
 
 	Scenario: Signing up for Chitter with an email already taken (sad path)
@@ -25,7 +25,7 @@ Feature: User can sign up to Chitter
 		And I fill in "username" with "sroopsy"
 		And I fill in "password" with "123"
 		And I fill in "password_confirmation" with "123"
-		And I press "Go!"
+		And I press "Sign Up!"
 		Then I should not be logged in
 
 	Scenario: Signing up for Chitter with a username already taken (sad path)
@@ -36,7 +36,7 @@ Feature: User can sign up to Chitter
 		And that "sroopsunar" already exists in the database
 		And I fill in "password" with "123"
 		And I fill in "password_confirmation" with "123"
-		And I press "Go!"
+		And I press "Sign Up!"
 		Then I should not be logged in
 
 	Scenario: Signing up for Chitter with incorrectly matching password and password confirmations (sad path)
@@ -46,7 +46,7 @@ Feature: User can sign up to Chitter
 		And I fill in "username" with "sroopsunar"
 		And I fill in "password" with "123"
 		And I fill in "password_confirmation" with "wrong"
-		And I press "Go!"
+		And I press "Sign Up!"
 		Then I should not be logged in
 
 

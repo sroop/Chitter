@@ -21,6 +21,7 @@ class User
   	validates_uniqueness_of :email
   	validates_uniqueness_of :username
 	validates_confirmation_of :password
+	validates_presence_of :email,  message: "Try again"
 
   	has n, :cheeps
 

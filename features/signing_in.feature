@@ -12,7 +12,7 @@ Feature: User can sign in to Chitter
 		And I click on "Sign In!"
 		When I fill in "email" with "sroopsunar@hotmail.com"
 		And I fill in "password" with "123"
-		And I press "Go!"
+		And I press "Sign In!"
 		Then I should be logged in
 
 	Scenario: Signing in to Chitter with the incorrect credentials(sad path)
@@ -20,5 +20,5 @@ Feature: User can sign in to Chitter
 		And I click on "Sign In!"
 		When I fill in "email" with "sroopsunar@hotmail.com"
 		And I fill in "password" with "wrong"
-		And I press "Go!"
+		And I press "Sign In!"
 		Then I should see "Please sign in!"
