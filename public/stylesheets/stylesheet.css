@@ -11,6 +11,7 @@ body {
 	background-origin: initial;
 	background-clip: initial;
 	background-color: #3a92c8;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 header {
@@ -27,7 +28,7 @@ header {
 }
 
 #welcome {
-	height: 279px;
+	height: 315px;
 	width: 475px;
 	padding: 24px;
 	background-color: white;
@@ -47,7 +48,7 @@ header {
 }
 
 #sign_up {
-	height: 179px;
+	height: 214px;
 	width: 290px;
 	padding: 6px;
 	background-color: white;
@@ -60,9 +61,12 @@ header {
 	width: 93%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10px;
+	margin-top: 6px;
 	padding: 8px;
 	display: block;
+	border-radius: 3px;
+	outline: 0;
+	border: 1px solid #e1e8ed;
 }
 
 .fill-in:nth-child(2) {
@@ -72,13 +76,45 @@ header {
 
 .sign-in-button {
 	float:right;
-	padding: 10px;
+	width: 24%;
+	padding: 8px;
+	margin-top: 6px;
+	border-radius: 3px;
+	outline: 0;
+	border: 1px solid #3b88c3;
+	color: #fff;
+	background-color: #55acee;
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.05));
+	cursor: pointer;
+}
+
+.sign-up-btn {
+	background-color: #ccd6dd;
+	background-repeat: no-repeat;
+	border: 1px solid #e1e8ed;
+	border-radius: 4px;
+	color: #66757f;
+	cursor: pointer;
+	float: right!important;
+}
+
+#welcome-title {
+	margin-top: 50px;
+	font-size: 21px;
+}
+
+#welcome-blurb {
+	color: #8899a6;
+	font-size: 14px;
+	line-height: 18px;
 	margin-top: 10px;
 }
 
-
-
-
-
-
-
+#phone-image {
+	background-image: url(../images/lohp_mdl_sprite.png);
+	position: absolute;
+	top: 105px;
+	left: 510px;
+	width: 222px;
+	height: 285px;
+}
