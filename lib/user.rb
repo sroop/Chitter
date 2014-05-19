@@ -22,7 +22,7 @@ class User
   	validates_uniqueness_of :username
 	validates_confirmation_of :password
 
-  	has n, :cheeps, through: Resource
+  	has n, :cheeps
 
   	def self.authenticate(email, password)
 		user = first(email: email)

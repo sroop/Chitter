@@ -1,4 +1,3 @@
-
 		
 <section>
 
@@ -12,6 +11,7 @@
 	<% @cheeps.each do |cheep| %>
 		<li><%= cheep.cheep %>
 			<%= cheep.created_at %></li>
+			<%= cheep.user.name %>
 	<% end %>
 
 </section>

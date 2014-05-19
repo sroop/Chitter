@@ -13,7 +13,7 @@ use Rack::MethodOverride
   end
 
   post '/' do
-    Cheep.create(cheep: params[:cheep], created_at: params[Time.now])
+    Cheep.create(cheep: params[:cheep], created_at: Time.now, user: current_user)
     redirect to('/')
   end
 

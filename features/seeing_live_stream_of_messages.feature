@@ -8,7 +8,7 @@ Feature: User can see a live stream of cheeps
 		Then I should see "Welcome to Chitter."
 
 	Scenario: Adding a cheep
-		Given I am on the homepage
+		Given I am signed in
 		When I fill in the "cheep" with "Cheep, Cheep!"
 		And I press "Cheep!"
 		Then I should see "Cheep, Cheep!"

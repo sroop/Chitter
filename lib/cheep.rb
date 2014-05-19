@@ -6,7 +6,6 @@ class Cheep
 	property :cheep, Text
 	property :created_at, DateTime
  	
- 	has 1, :user, through: Resource
-
+	belongs_to :user
 end
 	
