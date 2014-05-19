@@ -1,11 +1,14 @@
 require 'sinatra/base'
 require_relative './datamapper_setup'
+require 'sinatra/partial' 
 
 class Chitter < Sinatra::Base
 
 enable :sessions
 set :session_secret, 'super secret'
 use Rack::MethodOverride
+register Sinatra::Partial
+set :partial_template_engine, :erb
 
   get '/' do
   	@cheeps = Cheep.all

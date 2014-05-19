@@ -9,6 +9,7 @@ gem 'dm-timestamps'
 gem 'dm-migrations'
 gem 'bcrypt-ruby'
 gem 'rack-flash3'
+gem 'sinatra-partial'
 
 group :development, :test do
 	gem 'cucumber-sinatra'
