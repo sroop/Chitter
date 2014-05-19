@@ -3,14 +3,20 @@
 
 	<% unless current_user %>
 
-		<%= partial :"partials/sign_in_form" %>
-
-		<%= partial :"partials/sign_up_form" %>
-		
-		<section>
+	<section id="main-container">
+		<article id="welcome">
 			<h1>Welcome to Chitter.</h1>
 			<p>Start a conversation, explore your interests, and be in the know.</p>
-		</section>
+		</article>
+
+		<article id="sign_in">
+			<%= partial :"partials/sign_in_form" %>
+		</article>
+
+		<article id="sign_out">
+			<%= partial :"partials/sign_up_form" %>
+		</article>
+	</section>
 
 	 <% end %>
 
@@ -19,12 +25,15 @@
 			<input type="text" name="cheep">
 				<button type="submit">Cheep!</button>
 		</form>
-	<% end %>	
-		
-	<% @cheeps.each do |cheep| %>
-		<li><%= cheep.cheep %>
-			<%= cheep.created_at %></li>
+
+		<% @cheeps.each do |cheep| %>
+			<li>
+				<%= cheep.cheep %>
+				<%= cheep.created_at %>
+			</li>
 			<%= cheep.user.name %>
-	<% end %>
+		<% end %>
+
+	<% end %>	
 
 </section>

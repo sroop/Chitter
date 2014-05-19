@@ -18,3 +18,44 @@ header {
 	height: 46px;
 	width: 100%;
 }
+
+#main-container {
+	width: 840px;
+	background-color: yellow;
+	margin-top: 75px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#welcome {
+	height: 279px;
+	width: 475px;
+	padding: 24px;
+	background-color: white;
+	float: left;
+	border-radius: 4px;
+}
+
+#sign_in {
+	height: 110px;
+	width: 302px;
+	background-color: white;
+	float: right;
+	border-radius: 4px;
+}
+
+#sign_out {
+	height: 203px;
+	width: 302px;
+	background-color: white;
+	float: right;
+	margin-top: 14px;
+	border-radius: 4px;
+}
+
+
+
+
+
+
+
