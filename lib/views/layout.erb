@@ -7,8 +7,7 @@
 	<body>
 
 	<header>
-	</header>
-
+	<img id="twitter-bird" src="../images/twitter-bird.png"/>
 	<% if current_user %>
 
 		<form action="/sessions" method="POST">
@@ -19,6 +18,9 @@
     	Welcome, <%= current_user.name %>
     
  	<% end %>
+	</header>
+
+	
 
 	<%= yield %>
 

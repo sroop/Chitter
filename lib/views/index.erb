@@ -21,20 +21,47 @@
 
 	 <% end %>
 
+
+
 	<% if current_user %>	
-		<form action="/" method="POST">
-			<input type="text" name="cheep">
-				<button type="submit">Cheep!</button>
-		</form>
 
-		<% @cheeps.each do |cheep| %>
-			<li>
-				<%= cheep.cheep %>
-				<%= cheep.created_at %>
-			</li>
-			<%= cheep.user.name %>
-		<% end %>
+		<section id="session-content-container">
 
+			<section id="left-column">
+		    	<section id="profile-session">
+		    		<article id="cover-photo"></article>
+		    		<article id="avatar-pic"></article>
+		    		<article id="name-and-username"></article>
+		    		<article id="stats"></article>
+		    		<article id="compose-cheep">
+		    			<form action="/" method="POST">
+							<input type="text" name="cheep" placeholder="Compose new Cheep...">
+							<button type="submit">Cheep!</button>
+						</form>
+		    		</article>
+				</section>
+
+				<section id="trends-session"></section>
+			</section>
+
+			<section id="cheeps-session">
+				<% @cheeps.each do |cheep| %>
+					<%= cheep.user.name %>
+					<li>
+						<%= cheep.cheep %>
+						<%= cheep.created_at %>
+					</li>
+				<% end %>
+	    	</section>
+
+	    	<section id="right-column">
+		    	<section id="who-to-follow-session"></section>
+		    	<section id="footer-session"></section>
+		    </section>
+		</section>
 	<% end %>	
+
+
+
 
 </section>
