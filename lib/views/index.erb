@@ -32,7 +32,7 @@
 		    		<article id="cover-photo"></article>
 		    		<article id="avatar-pic"></article>
 		    		<article id="name-and-username">
-    					Welcome, <%= current_user.name %>
+    					Welcome,<br> <strong><%= current_user.name %></strong><br><p>@<%= current_user.username %></p>
 		    		</article>
 		    		<article id="stats"></article>
 		    		<article id="compose-cheep">
@@ -51,14 +51,16 @@
 			<h1>Cheeps</h1>
 
 				<% @cheeps.reverse.each do |cheep| %>
+					<div id="each-cheep">
 					<div id="cheep-info">
 						<h4><%= cheep.user.name %></h4>
-						<h5>@<%= cheep.user.username %></h5>
-						<h6><%= cheep.created_at.strftime("%A %H:%M %m/%d/%y") %></h6>
+						<h5>@<%= cheep.user.username %>
+						· <%= cheep.created_at.strftime("%A %H:%M %d/%m/%y") %></h5>
 					</div>
 					<li>
 						<%= cheep.cheep %>
 					</li>
+					</div>
 				<% end %>
 	    	</section>
 
