@@ -7,20 +7,14 @@
 	<body>
 
 	<header>
-	<img id="twitter-bird" src="../images/twitter-bird.png"/>
-	<% if current_user %>
-
-		<form action="/sessions" method="POST">
-			<input type="hidden" name="_method" value="delete">
-				<button type="submit">Sign Out!</button>
-		</form>
-
-    	Welcome, <%= current_user.name %>
-    
- 	<% end %>
+		<img id="twitter-bird" src="../images/twitter-bird.png"/>
+		<% if current_user %>
+			<form action="/sessions" method="POST">
+				<input type="hidden" name="_method" value="delete">
+				<button id="sign-out-button" type="submit">Sign Out!</button>
+			</form>
+	 	<% end %>
 	</header>
-
-	
 
 	<%= yield %>
 

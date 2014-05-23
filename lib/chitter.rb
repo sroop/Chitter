@@ -16,7 +16,7 @@ set :partial_template_engine, :erb
   end
 
   post '/' do
-    Cheep.create(cheep: params[:cheep], created_at: Time.now, user: current_user)
+    Cheep.create(cheep: params[:cheep], created_at: current_time, user: current_user)
     redirect to('/')
   end
 
@@ -64,6 +64,10 @@ set :partial_template_engine, :erb
 helpers do
     def current_user    
       User.get(session[:user_id]) if session[:user_id]
+    end
+
+    def currrent_time
+      (Time.now).strftime("%H:%M")
     end
 end
   # start the server if ruby file executed directly
